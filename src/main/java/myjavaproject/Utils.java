@@ -8,8 +8,9 @@ public class Utils {
 
     // Function 1: Reverse a string
     public static String reverseString(String str) {
-        // TODO: Implement this function
-        return null;
+        StringBuilder sb = new StringBuilder(str);
+        sb.reverse();
+        return sb.toString();
     }
 
     // Function 2: Capitalize the first letter of a string
