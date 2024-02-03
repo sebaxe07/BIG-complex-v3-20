@@ -34,7 +34,8 @@ jobs:
           total=$(echo "$output" | grep -oP '(\d+)(?=\s+tests completed)' | tail -1)
           echo "Failed tests: $failed"
           echo "Total tests: $total"
-          echo "FAILED=$failed" >> $GITHUB_ENV
+          passed=$((total - failed))
+          echo "PASSED=$passed" >> $GITHUB_ENV
           echo "TOTAL=$total" >> $GITHUB_ENV
           echo "$output"
       - name: Notify backend
