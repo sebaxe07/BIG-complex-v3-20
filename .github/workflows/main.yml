@@ -30,12 +30,11 @@ jobs:
         run: |
           output=$(./gradlew test 2>&1 || true)
           echo "Test output: $output"
-          failed=$(echo "$output" | grep -o 'FAILED' | wc -l)
-          total=$(echo "$output" | grep -o 'tests completed' | wc -l)
+          failed=$(echo "$output" | grep 'FAILED' | wc -l)
+          total=$(echo "$output" | grep 'UtilsTest' | wc -l)
           echo "Failed tests: $failed"
           echo "Total tests: $total"
-          passed=$((total - failed))
-          echo "PASSED=$passed" >> $GITHUB_ENV
+          echo "FAILED=$failed" >> $GITHUB_ENV
           echo "TOTAL=$total" >> $GITHUB_ENV
           echo "$output"
       - name: Notify backend
