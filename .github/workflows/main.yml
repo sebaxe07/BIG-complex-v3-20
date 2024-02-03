@@ -32,9 +32,14 @@ jobs:
           echo "Test output: $output"
           failed=$(echo "$output" | grep -oP '(\d+)(?=\s+failed)' | tail -1)
           total=$(echo "$output" | grep -oP '(\d+)(?=\s+tests completed)' | tail -1)
+          if [ -z "$total" ]; then
+            total=$(grep -r '@Test' . | wc -l)
+            passed=$total
+          else
+            passed=$((total - failed))
+          fi
           echo "Failed tests: $failed"
           echo "Total tests: $total"
-          passed=$((total - failed))
           echo "PASSED=$passed" >> $GITHUB_ENV
           echo "TOTAL=$total" >> $GITHUB_ENV
           echo "$output"
