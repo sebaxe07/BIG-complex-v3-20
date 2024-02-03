@@ -30,8 +30,8 @@ jobs:
         run: |
           output=$(./gradlew test 2>&1 || true)
           echo "Test output: $output"
-          failed=$(echo "$output" | grep 'FAILED' | wc -l)
-          total=$(echo "$output" | grep 'UtilsTest' | wc -l)
+          failed=$(echo "$output" | grep -oP '(\d+)(?=\s+failed)' | tail -1)
+          total=$(echo "$output" | grep -oP '(\d+)(?=\s+tests completed)' | tail -1)
           echo "Failed tests: $failed"
           echo "Total tests: $total"
           echo "FAILED=$failed" >> $GITHUB_ENV
