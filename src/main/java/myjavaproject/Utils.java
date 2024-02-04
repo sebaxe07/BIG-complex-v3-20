@@ -15,7 +15,7 @@ public class Utils {
 
     // Function 2: Capitalize the first letter of a string
     public static String capitalizeFirstLetter(String str) {
-        str = str.substring(0, 2).toUpperCase() + str.substring(1);
+        str = str.substring(0, 1).toUpperCase() + str.substring(1);
         return str;
     }
 }
