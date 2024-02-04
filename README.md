@@ -8,7 +8,7 @@ This Java project with Gradle is designed for a Code Kata Battle, providing stud
 
 ### Implement the following utility functions in `src/main/java/myjavaproject/Utils.java`:
  
-1. **`reverseString(String str)`**
+1. **`reverseString(String str)`** 
 
    - Reverse a given string.
  
