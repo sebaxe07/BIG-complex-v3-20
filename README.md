@@ -11,7 +11,7 @@ This Java project with Gradle is designed for a Code Kata Battle, providing stud
 1. **`reverseString(String str)`**
 
    - Reverse a given string.
-
+ 
 2. **`capitalizeFirstLetter(String str)`**
    - Capitalize the first letter of a given string.
 
