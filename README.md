@@ -14,7 +14,7 @@ This Java project with Gradle is designed for a Code Kata Battle, providing stud
  
 2. **`capitalizeFirstLetter(String str)`**
    - Capitalize the first letter of a given string.
-
+ 
 ### Instructions for Students:
 
 - Open the `src/main/java/myjavaproject/Utils.java` file.
