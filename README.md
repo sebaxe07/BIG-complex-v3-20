@@ -13,7 +13,7 @@ This Java project with Gradle is designed for a Code Kata Battle, providing stud
    - Reverse a given string.
  
 2. **`capitalizeFirstLetter(String str)`**
-   - Capitalize the first letter of a given string.
+   - Capitalize the first letter of a given string. 
  
 ### Instructions for Students:
 
