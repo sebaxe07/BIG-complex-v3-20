@@ -4,7 +4,7 @@
 
 This Java project with Gradle is designed for a Code Kata Battle, providing students with the opportunity to practice and enhance their Java programming skills. The project focuses on string manipulation with the implementation of utility functions.
 
-## Task
+## Task 
 
 ### Implement the following utility functions in `src/main/java/myjavaproject/Utils.java`:
  
